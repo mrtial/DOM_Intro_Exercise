@@ -80,8 +80,27 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
+// BONUS: If someone types the Konami Code, the page alerts "YOU ARE AN EVENT HANDLER GURUUUUUUUUU!"
+
+    var inpute="";
+    var konami="38384040373937396665";
+
+    addEventListener("keydown",function(event){
+      inpute+=String(event.which);
+      console.log(event.which);
+      console.log(inpute);
 
 
+      if(inpute==konami){
+        alert("YOU ARE AN EVENT HANDLER GURUUUUUUUUU!");
+        inpute="";
+        }
 
+      // setTimeout(function(){inpute="";},2000);
+
+    });
+
+      
+  
 
 });
